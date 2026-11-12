@@ -163,6 +163,7 @@ The developer must provide the complete application source code under an open-so
 The developer must also provide a ready-to-install Android package (.apk) for Version 1.
 The developer may choose to develop versions for other platforms in future releases, provided that all Android Version 1 requirements are fully met.
 The architecture must preserve flexibility for future cross-platform support.
+The source code must be published in the public repository only after the project creator has tested and approved the .apk package.
 Reference Code and Future Cross-Platform Compatibility
 The developer must select the most suitable programming language, framework, and technology for reliable Android development and real hardware control, while preserving flexibility for future communication technologies, including Bluetooth, Wi-Fi, and other suitable methods, as well as future platform support.
 The provided Python code is for reference and demonstration purposes only. It is not intended to define or restrict the final application architecture, programming language, framework, or technology selection.
