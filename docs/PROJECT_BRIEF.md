@@ -126,6 +126,7 @@ PLAY/PAUSE acts as a context-sensitive hardware toggle (for example, switches th
 PREVIOUS and NEXT perform their assigned functions where applicable.
 
 Appearance Note: The visual iPod Click Wheel is purely for nostalgic aesthetics. It must not require or accept rotary sliding or scrolling gestures. All navigation must be completed using predictable click button actions.
+Whenever text or PIN input is required while inside the iPod interface (such as Wi-Fi or Security settings), the keyboard must replace only the lower iPod button control area, keeping the top display screen visible.
 State Persistence: Loca Nova must remember the user's last selected device and active menu position, restoring them upon application restart where appropriate.
 
 Consistent Accessibility Color-Coding:
