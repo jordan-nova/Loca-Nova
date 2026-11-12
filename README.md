@@ -1,6 +1,9 @@
 ## Full Documentation & Instructions:
 ## Read [PROJECT_BRIEF.md](./docs/PROJECT_BRIEF.md) for details regarding the project architecture and goals.
 
+## ![Loca Nova Interface Preview](./preview.png)
+
+
 
 # Loca Nova – Initial Project
 
