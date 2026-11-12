@@ -38,6 +38,7 @@ The developer must prioritize universal compatibility, flexibility, modularity, 
 3. User Interaction Scenario
 Application Startup, Login, and Security Management
 Welcome State: When the user opens the application, display a brief welcome screen showing Loca Nova.
+Initial Setup: On the very first launch after installation, prompt the user to create their initial PIN (which also serves as the Administrator PIN by default, with an option to set a separate Administrator PIN later in Settings).
 If Level 1 – Easy Access is active and the initial login has already been completed, skip the Authentication Portal and go directly to the Main Menu.
 Otherwise, proceed to the Authentication Portal.
 Authentication Portal: Display a PIN field with the instruction: "Please enter your PIN to continue."
@@ -63,7 +64,7 @@ If the selected device or communication method requires a gateway, the developer
 Connection Errors: If the lamp or a required communication component cannot be found, or the connection fails, display a friendly error message and offer a RETRY option.
 Device Control and UI Consistency: Once the lamp connection is established, open the Lamp Control screen so the user can operate the lamp.
 All connection, selection, and authentication steps must maintain the same iPod 5th Generation interface style, with clear instructions at every step.
-4. Driver Interface and Modular Deployment
+5. Driver Interface and Modular Deployment
 Translation Layer: Drivers handle device-specific operations, translating generic Core JSON payloads into the precise communication methods and hardware operations required by the target device. They return operation results and the reported hardware state to the Core.
 Modular Constraints: For Version 1, particularly on Android, device driver modules must be included as statically compiled components within the main application codebase rather than dynamically loaded executable files. This approach must respect platform compatibility and applicable app store security policies.
 Dynamic loading of separate executable binaries may be explored as an optional feature on Windows or other suitable future platforms.
@@ -77,7 +78,7 @@ The developer must investigate practical methods for adding, installing, downloa
 The solution must consider Android restrictions and preserve flexibility for future platforms. The architecture must allow different driver installation methods depending on the operating system, without requiring changes to the Core wherever technically possible.
 The developer must identify possible limitations and choose the most flexible and practical solution for long-term expansion.
 The Communication Manager and Device Driver Manager must operate as separate components, allowing new communication technologies and device drivers to be added independently without requiring changes to the Core.
-5. UI Layout, iPod Navigation, and Colors
+6. UI Layout, iPod Navigation, and Colors
 iPod Heritage Aesthetic: Use a Main Menu modeled directly after the iPod 5th Generation interface layout, scaled and simplified for elderly accessibility. All visual controls must be large, highly legible, and intuitive.
 Unified Button Configuration: The application uses one unified physical/virtual button mapping to navigate and control all supported device categories.
 Navigation Button Mappings:
@@ -115,7 +116,7 @@ Focus on making the application simple and comfortable to use, especially for el
 Please use familiar and consistent interface elements and navigation patterns throughout the application. Buttons, menus, and actions should behave predictably, so users do not have to figure out how things work every time they open a new screen.
 Feel free to use your professional judgment to improve the design and functionality while keeping the application consistent with the original concept.
 Please keep in mind that some instructions may contain mistakes or inconsistencies, and correct them in the code where necessary.
-6. Main Menu Structure and Device Control
+7. Main Menu Structure and Device Control
 1. Devices: Lists all available registered and connected equipment.
 Version 1 Scope: Lamp is the primary operational device. Selecting Devices → Lamp → OK opens the dedicated Lamp Control UI.
 The UI displays the active lamp state: ON or OFF.
