@@ -4,6 +4,7 @@ Architectural Philosophy: Universal Device Compatibility
 
 Loca Nova is designed as a universal, modular device-control platform intended to support a wide range of compatible devices, network environments, and communication protocols.
 It is designed with elderly users in mind, focusing on clarity, comfort, and effortless everyday control. 
+
 Platform Independence: The application must not depend on a specific router, network configuration, device brand, or communication protocol. It should support different connection methods through independent, replaceable drivers and clearly defined interfaces.
 Protocol-Agnostic Core: The Core must remain lightweight and protocol-agnostic. New compatible devices and communication methods should be integrated through independent drivers without requiring changes to the existing Core wherever possible. The Core may be improved when technically necessary.
 Functional Expectations: The application should support device discovery, connection, control, and status reporting wherever the device and its communication method permit these functions.
@@ -36,6 +37,7 @@ The developer may choose the communication method best suited to the selected la
 Android Compatibility: The application must support the widest practical range of Android devices, manufacturers, and operating system versions, using adaptive platform integration to ensure maximum compatibility with available hardware and system capabilities.
 Future Expansion: The Version 1 architecture must support future expansion with additional device types, communication technologies, control interfaces, and platforms without requiring a complete redesign of the Core.
 Command Validation: The Core must validate commands, communicate with the appropriate device driver or integration, and report the lamp's current status to the application through a secure local interface using standardized JSON command payloads.
+
 Quality Assurance: The developer must implement appropriate testing and quality assurance procedures throughout development to identify and prevent bugs, errors, crashes, and unexpected behavior.
 Language Environment: Version 1 of Loca Nova must be developed in English, including the user interface, menus, buttons, messages, notifications, and settings.
 
@@ -52,6 +54,7 @@ Welcome State: When the user opens the application, display a brief welcome scre
 Initial Setup: On the very first launch after installation, prompt the user to create their initial PIN (which also serves as the Administrator PIN by default, with an option to set a separate Administrator PIN later in Settings).
 If Level 1 – Easy Access is active and the initial login has already been completed, skip the Authentication Portal and go directly to the Main Menu.
 Otherwise, proceed to the Authentication Portal.
+
 Authentication Portal: Display a PIN field with the instruction: "Please enter your PIN to continue."
 On-Screen Keyboard: Show a keyboard icon next to the field. Selecting the application PIN field or its icon, using touch or physical buttons where supported, opens a full-screen numeric keypad featuring large, clearly visible keys.
 Password fields, such as Wi-Fi or device passwords where applicable, must open a full-screen QWERTY-style keyboard with numbers, letters, spaces, special characters, Backspace, and Enter/Done.
@@ -59,6 +62,7 @@ Support copying, pasting, and long inputs without unnecessary length restriction
 Close the keyboard upon confirmation or when the physical or virtual BACK button is pressed, returning smoothly to the previous screen.
 PIN Privacy: Hide PINs and passwords by default, providing an explicit toggle option to show or hide the characters.
 Security Levels: The system must support two selectable security levels, manageable within Settings using an administrator PIN:
+
 Level 1 – Easy Access: A PIN is required only the first time the application is opened. After successful entry, the application remains unlocked for everyday use.
 Level 2 – Protected Access: A PIN is required every time the application is opened.
 Security Constraint: Never store PINs, passwords, or credentials in plain text. All authentication data must use secure platform credential storage, with hardware-backed protection wherever supported by the target platform.
@@ -67,6 +71,7 @@ PIN recovery is not required for Version 1 and may be considered for a future ve
 Main Menu and Lamp Connection
 Main Menu Navigation: Once authenticated, display the Main Menu, designed in the style of the iPod 5th Generation. The user must be able to navigate the menu using supported physical buttons and touch controls to select Devices → Lamp.
 Device Scope: The physical lamp is the required operational device for Version 1. The developer may add a smart plug, radio, or TV or other devices as optional demonstrations or extensions.
+
 Lamp Connection: When the user opens Lamp Control, Loca Nova must use the communication method selected for the physical lamp.
 If that method requires Wi-Fi network selection or credentials, guide the user through the required steps using a clear, easy-to-navigate list and the full-screen QWERTY-style keyboard.
 Password fields must follow the privacy rules: hidden by default, with a show/hide toggle.
@@ -119,6 +124,7 @@ MENU opens the top-level Main Menu instantly without destroying or clearing the 
 BACK navigates to the immediately previous screen, safely restoring the previous item focus to prevent confusion.
 PLAY/PAUSE acts as a context-sensitive hardware toggle (for example, switches the lamp ON or OFF).
 PREVIOUS and NEXT perform their assigned functions where applicable.
+
 Appearance Note: The visual iPod Click Wheel is purely for nostalgic aesthetics. It must not require or accept rotary sliding or scrolling gestures. All navigation must be completed using predictable click button actions.
 State Persistence: Loca Nova must remember the user's last selected device and active menu position, restoring them upon application restart where appropriate.
 
@@ -127,6 +133,7 @@ Green: Assigned exclusively to YES, OK, confirmation, or approval actions.
 Red: Assigned exclusively to NO, CANCEL, decline, or stop actions.
 Blue: Used for recommended, highlighted, or default choices to visually guide the user's focus.
 Visual Constraint: To support users with color blindness, colors must always be accompanied by clear text labels or explicit symbols (for example, combining a green block with an explicit ✓ or "OK").
+
 Device-Specific Button Behavior: The same unified button layout must be maintained across all supported device types. Button functions must adapt to the capabilities and requirements of the selected device. The developer must identify and address any technical limitations that could prevent this goal.
 
 Development Approach
@@ -201,6 +208,7 @@ The developer may choose to develop versions for other platforms in future relea
 The architecture must preserve flexibility for future cross-platform support.
 The source code must be published in the public repository only after the project creator has tested and approved the .apk package.
 
-Reference Code and Future Cross-Platform Compatibility
+14. Reference Code and Future Cross-Platform Compatibility
+
 The developer must select the most suitable programming language, framework, and technology for reliable Android development and real hardware control, while preserving flexibility for future communication technologies, including Bluetooth, Wi-Fi, and other suitable methods, as well as future platform support.
 The provided Python code is for reference and demonstration purposes only. It is not intended to define or restrict the final application architecture, programming language, framework, or technology selection.
