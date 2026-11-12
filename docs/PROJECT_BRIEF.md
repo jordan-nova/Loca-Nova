@@ -53,7 +53,7 @@ Security Constraint: Never store PINs, passwords, or credentials in plain text. 
 PIN recovery is not required for Version 1 and may be considered for a future version.
 Main Menu and Lamp Connection
 Main Menu Navigation: Once authenticated, display the Main Menu, designed in the style of the iPod 5th Generation. The user must be able to navigate the menu using supported physical buttons and touch controls to select Devices → Lamp.
-Device Scope: The physical lamp is the required operational device for Version 1. The developer may add a heater or other devices as optional demonstrations or extensions.
+Device Scope: The physical lamp is the required operational device for Version 1. The developer may add a smart plug, radio, or TV or other devices as optional demonstrations or extensions.
 Lamp Connection: When the user opens Lamp Control, Loca Nova must use the communication method selected for the physical lamp.
 If that method requires Wi-Fi network selection or credentials, guide the user through the required steps using a clear, easy-to-navigate list and the full-screen QWERTY-style keyboard.
 Password fields must follow the privacy rules: hidden by default, with a show/hide toggle.
