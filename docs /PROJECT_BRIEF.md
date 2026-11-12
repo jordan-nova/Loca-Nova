@@ -23,7 +23,7 @@ All initial architectural decisions must take this long-term expansion goal into
 1. Project Goal
 
 Develop a simple, user-friendly application for controlling at least one real physical lamp. The connection method is at the developer's discretion.
-The application must feature an interface inspired by the iPod 5th Generation, specifically adapted for elderly users.
+The application must feature an interface inspired by a classic MP3 player screen layout, specifically adapted for elderly users.
 A simulated lamp may be used during development and testing, but it does not replace the requirement to demonstrate control of a real physical lamp.
 
 2. Technical Requirements and Platform Scope
@@ -69,7 +69,7 @@ Security Constraint: Never store PINs, passwords, or credentials in plain text. 
 PIN recovery is not required for Version 1 and may be considered for a future version.
 
 Main Menu and Lamp Connection
-Main Menu Navigation: Once authenticated, display the Main Menu, designed in the style of the iPod 5th Generation. The user must be able to navigate the menu using supported physical buttons and touch controls to select Devices → Lamp.
+Main Menu Navigation: Once authenticated, display the Main Menu, designed in the style of an MP3 player-inspired split-screen layout. The user must be able to navigate the menu using supported physical buttons and touch controls to select Devices → Lamp.
 Device Scope: The physical lamp is the required operational device for Version 1. The developer may add a smart plug, radio, or TV or other devices as optional demonstrations or extensions.
 
 Lamp Connection: When the user opens Lamp Control, Loca Nova must use the communication method selected for the physical lamp.
