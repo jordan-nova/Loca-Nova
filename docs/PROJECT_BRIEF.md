@@ -89,8 +89,12 @@ Local Core Operation: The application must communicate with the Core running on 
 Discovering a separate server through mDNS is not required for communication with the locally running Core.
 If the selected device or communication method requires a gateway, the developer must clearly identify that dependency. The gateway must not be assumed to be part of the local Core.
 Connection Errors: If the lamp or a required communication component cannot be found, or the connection fails, display a friendly error message and offer a RETRY option.
+
 Device Control and UI Consistency: Once the lamp connection is established, open the Lamp Control screen so the user can operate the lamp.
 All connection, selection, and authentication steps must maintain the same classic MP3-player inspired interface style, with clear instructions at every step.
+
+Automatic Connections: All network and device connections must happen automatically so the app is simple, clear, and easy to use for elderly people.
+
 
 4. Driver Interface and Modular Deployment
 
