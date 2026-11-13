@@ -7,11 +7,13 @@ It is designed with elderly users in mind, focusing on clarity, comfort, and eff
 
 Platform Independence: The application must not depend on a specific router, network configuration, device brand, or communication protocol. It should support different connection methods through independent, replaceable drivers and clearly defined interfaces.
 Protocol-Agnostic Core: The Core must remain lightweight and protocol-agnostic. New compatible devices and communication methods should be integrated through independent drivers without requiring changes to the existing Core wherever possible. The Core may be improved when technically necessary.
+
 Functional Expectations: The application should support device discovery, connection, control, and status reporting wherever the device and its communication method permit these functions.
 Architectural Scope: Universal compatibility is an architectural goal, not a claim that every device can be controlled automatically. Each device must have a compatible communication method, a suitable driver, and any required authorization.
 Future-Proofing: The architecture should support future device categories and other compatible equipment by adding suitable drivers and adapters without redesigning the entire system.
 
 Long-Term Core Stability 
+
 The initial version of Loca Nova must establish a stable, modular, and extensible architectural foundation for future expansion.
 Loca Nova must be designed as a universal device-control platform, not as an application limited to lamps, smart home devices, or home automation. Its architecture must support devices from different categories, manufacturers, and environments through one unified Core, modular device drivers, and multiple communication technologies, allowing maximum practical compatibility and future expansion.
 Core Architecture: The Core must be designed from the beginning to support the addition of new compatible devices, drivers, communication protocols, and features without requiring the Core or the entire application to be rewritten.
