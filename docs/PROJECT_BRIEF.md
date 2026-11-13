@@ -6,6 +6,7 @@ Loca Nova is designed as a universal, modular device-control platform intended t
 It is designed with elderly users in mind, focusing on clarity, comfort, and effortless everyday control. 
 
 Platform Independence: The application must not depend on a specific router, network configuration, device brand, or communication protocol. It should support different connection methods through independent, replaceable drivers and clearly defined interfaces.
+
 Protocol-Agnostic Core: The Core must remain lightweight and protocol-agnostic. New compatible devices and communication methods should be integrated through independent drivers without requiring changes to the existing Core wherever possible. The Core may be improved when technically necessary.
 
 Functional Expectations: The application should support device discovery, connection, control, and status reporting wherever the device and its communication method permit these functions.
