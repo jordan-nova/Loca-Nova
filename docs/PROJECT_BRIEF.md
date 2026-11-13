@@ -16,8 +16,10 @@ Long-Term Core Stability
 
 The initial version of Loca Nova must establish a stable, modular, and extensible architectural foundation for future expansion.
 Loca Nova must be designed as a universal device-control platform, not as an application limited to lamps, smart home devices, or home automation. Its architecture must support devices from different categories, manufacturers, and environments through one unified Core, modular device drivers, and multiple communication technologies, allowing maximum practical compatibility and future expansion.
+
 Core Architecture: The Core must be designed from the beginning to support the addition of new compatible devices, drivers, communication protocols, and features without requiring the Core or the entire application to be rewritten.
 Decoupled Functionality: Future functionality should be introduced primarily through independent drivers, extensions, and modules that use clearly defined interfaces.
+
 Seamless Integration: Adding a new compatible device should normally require only the installation or integration of its appropriate driver, device registration, and any necessary device-specific user interface components.
 Core Modifications: The Core may be modified when technically necessary for architectural improvements, security, compatibility, or critical bug fixes. However, rewriting the Core or the main application must not be the normal method of adding new devices or features.
 All initial architectural decisions must take this long-term expansion goal into account.
@@ -32,11 +34,14 @@ A simulated lamp may be used during development and testing, but it does not rep
 
 Local Infrastructure: Version 1 must operate as a locally installed Android application, with the Core running locally on the same device as the application.
 Version 1 Platform: Android is the only required platform for Version 1. The developer must select the most suitable programming language, framework, and development approach for the Android application and its Core. The architecture should preserve flexibility for future support of other platforms, including Windows, without requiring a complete redesign of the Core.
+
 Physical Hardware Target: Version 1 must support control of at least one real physical lamp. The developer may choose the most suitable communication technology and implementation method for connecting the application and Core to the lamp, such as Wi-Fi, Bluetooth, or another appropriate communication technology.
 The selected hardware must be a common, easily accessible consumer smart lamp (for example, a standard Wi-Fi smart bulb) so that it can be easily obtained and tested.
+
 Network Independence: Version 1 must be able to control the selected physical lamp over the chosen local communication method without requiring external internet access or an external server. The required Version 1 lamp-control function must not depend on external cloud connectivity.
 The developer may choose the communication method best suited to the selected lamp.
 Android Compatibility: The application must support the widest practical range of Android devices, manufacturers, and operating system versions, using adaptive platform integration to ensure maximum compatibility with available hardware and system capabilities.
+
 Future Expansion: The Version 1 architecture must support future expansion with additional device types, communication technologies, control interfaces, and platforms without requiring a complete redesign of the Core.
 Command Validation: The Core must validate commands, communicate with the appropriate device driver or integration, and report the lamp's current status to the application through a secure local interface using standardized JSON command payloads.
 
@@ -46,6 +51,7 @@ Language Environment: Version 1 of Loca Nova must be developed in English, inclu
 Universal Compatibility Review:
 Loca Nova is intended to become a universal device-control platform, capable of controlling the widest practical range of device types through a unified system.
 The developer must review all technical requirements and consider whether the proposed architecture, control interface, communication methods, connection mechanisms, drivers, and other essential components are suitable for achieving this goal.
+
 If any existing instructions or technical requirements limit universal compatibility, restrict future expansion, or prevent the intended functionality, the developer must identify these limitations and propose suitable technical solutions.
 The developer must prioritize universal compatibility, flexibility, modularity, reliability, and future expansion when making technical decisions, rather than following any instruction that may conflict with the project's overall goal.
 
@@ -71,12 +77,14 @@ Security Constraint: Never store PINs, passwords, or credentials in plain text. 
 PIN recovery is not required for Version 1 and may be considered for a future version.
 
 Main Menu and Lamp Connection
+
 Main Menu Navigation: Once authenticated, display the Main Menu, designed in the style of an MP3 player-inspired split-screen layout. The user must be able to navigate the menu using supported physical buttons and touch controls to select Devices → Lamp.
 Device Scope: The physical lamp is the required operational device for Version 1. The developer may add a smart plug, radio, or TV or other devices as optional demonstrations or extensions.
 
 Lamp Connection: When the user opens Lamp Control, Loca Nova must use the communication method selected for the physical lamp.
 If that method requires Wi-Fi network selection or credentials, guide the user through the required steps using a clear, easy-to-navigate list and the full-screen QWERTY-style keyboard.
 Password fields must follow the privacy rules: hidden by default, with a show/hide toggle.
+
 Local Core Operation: The application must communicate with the Core running on the same device. The Core must use the appropriate driver or integration to communicate with the physical lamp.
 Discovering a separate server through mDNS is not required for communication with the locally running Core.
 If the selected device or communication method requires a gateway, the developer must clearly identify that dependency. The gateway must not be assumed to be part of the local Core.
@@ -89,6 +97,7 @@ All connection, selection, and authentication steps must maintain the same class
 Translation Layer: Drivers handle device-specific operations, translating generic Core JSON payloads into the precise communication methods and hardware operations required by the target device. They return operation results and the reported hardware state to the Core.
 Modular Constraints: For Version 1, particularly on Android, device driver modules must be included as statically compiled components within the main application codebase rather than dynamically loaded executable files. This approach must respect platform compatibility and applicable app store security policies.
 Dynamic loading of separate executable binaries may be explored as an optional feature on Windows or other suitable future platforms.
+
 Open-Closed Compliance: New drivers must follow the defined interface and must not require unnecessary changes to existing Core functionality.
 Communication Management and Routing: The architecture must include a scalable communication management and routing layer that can select and coordinate suitable communication paths between the Core and compatible devices.
 It must support direct connections, gateways, and relays. The architecture should be extensible to remote communication paths in future versions, using appropriate drivers and protocol adapters.
@@ -119,6 +128,7 @@ DOWN
 LEFT
 RIGHT
 BACK
+
 Operational Behaviors:
 UP, DOWN, LEFT, and RIGHT are used for clear directional grid navigation.
 OK confirms active text, menu, or list selections.
