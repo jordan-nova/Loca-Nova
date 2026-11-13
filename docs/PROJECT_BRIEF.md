@@ -104,6 +104,8 @@ It must support direct connections, gateways, and relays. The architecture shoul
 It must support managing a large number of diverse devices across different environments and locations, subject to each device's capabilities, connectivity, and required infrastructure.
 Version 1 lamp control must continue to meet the local operation requirements defined in Section 2.
 
+Strict Module Isolation: Keep each device driver and its JSON profile in a separate folder communicating only via a unified Core interface, so future devices require zero changes to existing code. Prove this by disabling the Lamp driver without crashing the app.
+
 Future Driver Management and Cross-Platform Compatibility
 The developer must investigate practical methods for adding, installing, downloading, and managing new device drivers without requiring a complete application update.
 The solution must consider Android restrictions and preserve flexibility for future platforms. The architecture must allow different driver installation methods depending on the operating system, without requiring changes to the Core wherever technically possible.
