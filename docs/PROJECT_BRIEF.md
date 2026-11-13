@@ -80,7 +80,7 @@ Discovering a separate server through mDNS is not required for communication wit
 If the selected device or communication method requires a gateway, the developer must clearly identify that dependency. The gateway must not be assumed to be part of the local Core.
 Connection Errors: If the lamp or a required communication component cannot be found, or the connection fails, display a friendly error message and offer a RETRY option.
 Device Control and UI Consistency: Once the lamp connection is established, open the Lamp Control screen so the user can operate the lamp.
-All connection, selection, and authentication steps must maintain the same iPod 5th Generation interface style, with clear instructions at every step.
+All connection, selection, and authentication steps must maintain the same classic MP3-player inspired interface style, with clear instructions at every step.
 
 4. Driver Interface and Modular Deployment
 
@@ -99,13 +99,13 @@ The solution must consider Android restrictions and preserve flexibility for fut
 The developer must identify possible limitations and choose the most flexible and practical solution for long-term expansion.
 The Communication Manager and Device Driver Manager must operate as separate components, allowing new communication technologies and device drivers to be added independently without requiring changes to the Core.
 
-5. UI Layout, iPod Navigation, and Colors
+5. UI Layout, Wheel Navigation, and Colors
 
-iPod Heritage Aesthetic: Use a Main Menu modeled directly after the iPod 5th Generation interface layout, scaled and simplified for elderly accessibility. All visual controls must be large, highly legible, and intuitive.
+Retro Player Heritage Aesthetic: Use a Main Menu modeled directly after a classic MP3-player split-screen interface layout, scaled and simplified for elderly accessibility. All visual controls must be large, highly legible, and intuitive.
 Unified Button Configuration: The application uses one unified physical/virtual button mapping to navigate and control all supported device categories.
 
 Navigation Button Mappings:
-Original iPod buttons:
+Original Wheel buttons:
 MENU
 PLAY/PAUSE
 PREVIOUS
@@ -125,8 +125,9 @@ BACK navigates to the immediately previous screen, safely restoring the previous
 PLAY/PAUSE acts as a context-sensitive hardware toggle (for example, switches the lamp ON or OFF).
 PREVIOUS and NEXT perform their assigned functions where applicable.
 
-Appearance Note: The visual iPod Click Wheel is purely for nostalgic aesthetics. It must not require or accept rotary sliding or scrolling gestures. All navigation must be completed using predictable click button actions.
-Whenever text or PIN input is required while inside the iPod interface (such as Wi-Fi or Security settings), the keyboard must replace only the lower iPod button control area, keeping the top display screen visible.
+Appearance Note: 
+The visual circular Click Wheel is purely for nostalgic aesthetics. It must not require or accept rotary sliding or scrolling gestures. All navigation must be completed using predictable click button actions.
+Whenever text or PIN input is required while inside the player interface (such as Wi-Fi or Security settings), the keyboard must replace only the lower Wheel  button control area, keeping the top display screen visible.
 State Persistence: Loca Nova must remember the user's last selected device and active menu position, restoring them upon application restart where appropriate.
 
 Consistent Accessibility Color-Coding:
@@ -135,12 +136,14 @@ Red: Assigned exclusively to NO, CANCEL, decline, or stop actions.
 Blue: Used for recommended, highlighted, or default choices to visually guide the user's focus.
 Visual Constraint: To support users with color blindness, colors must always be accompanied by clear text labels or explicit symbols (for example, combining a green block with an explicit ✓ or "OK").
 
-Device-Specific Button Behavior: The same unified button layout must be maintained across all supported device types. Button functions must adapt to the capabilities and requirements of the selected device. The developer must identify and address any technical limitations that could prevent this goal.
+Device-Specific Button Behavior: 
+The same unified button layout must be maintained across all supported device types. Button functions must adapt to the capabilities and requirements of the selected device. The developer must identify and address any technical limitations that could prevent this goal.
 
 Development Approach
 Please use your professional skills, experience, and creativity to complete the entire Loca Nova application, following the concept and principles described above.
 You have the freedom to choose the most suitable technical solutions and make improvements wherever necessary.
 Focus on making the application simple and comfortable to use, especially for elderly people. Provide clear, friendly guidance at every step so users always know what to do next.
+
 Please use familiar and consistent interface elements and navigation patterns throughout the application. Buttons, menus, and actions should behave predictably, so users do not have to figure out how things work every time they open a new screen.
 Feel free to use your professional judgment to improve the design and functionality while keeping the application consistent with the original concept.
 Please keep in mind that some instructions may contain mistakes or inconsistencies, and correct them in the code where necessary.
@@ -174,7 +177,8 @@ Privacy Guardrails: Do not expose plain-text credentials or leak cryptographic h
 
 Configuration Over Code: Device capabilities, context-sensitive button behaviors, menu listings, command definitions, parameters, and configuration settings should be described through declarative JSON configuration files wherever practical.
 Actual protocol handling and hardware communication must be implemented by the appropriate driver, adapter, or integration code. JSON configuration does not replace executable code when a device requires a new protocol implementation.
-Dynamic Command Interpretation: The Core must read these JSON device maps dynamically to bind the 10-button universal virtual iPod control layout to the specific device context.
+
+Dynamic Command Interpretation: The Core must read these JSON device maps dynamically to bind the 10-button universal virtual Wheel control layout to the specific device context.
 Updating supported device settings and button interactions should be achievable by adjusting the JSON configuration without rewriting hardcoded conditional logic inside the Core or UI layers.
 Adding a device that requires a new communication protocol may also require a suitable new driver, adapter, or integration.
 
