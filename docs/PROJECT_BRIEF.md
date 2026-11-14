@@ -237,6 +237,7 @@ The architecture must support different pairing methods without requiring change
 11. Connection Recovery
 
 The application must detect unexpected connection loss and attempt to restore the connection when possible.
+
 The recovery process must:
 Detect connection interruptions and communication timeouts.
 Attempt reconnection using the appropriate communication method.
