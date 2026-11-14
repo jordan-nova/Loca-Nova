@@ -37,6 +37,7 @@ A simulated lamp may be used during development and testing, but it does not rep
 2. Technical Requirements and Platform Scope
 
 Local Infrastructure: Version 1 must operate as a locally installed Android application, with the Core running locally on the same device as the application.
+
 Version 1 Platform: Android is the only required platform for Version 1. The developer must select the most suitable programming language, framework, and development approach for the Android application and its Core. The architecture should preserve flexibility for future support of other platforms, including Windows, without requiring a complete redesign of the Core.
 
 Physical Hardware Target: Version 1 must support control of at least one real physical lamp. The developer may choose the most suitable communication technology and implementation method for connecting the application and Core to the lamp, such as Wi-Fi, Bluetooth, or another appropriate communication technology.
@@ -44,6 +45,7 @@ The selected hardware must be a common, easily accessible consumer smart lamp (f
 
 Network Independence: Version 1 must be able to control the selected physical lamp over the chosen local communication method without requiring external internet access or an external server. The required Version 1 lamp-control function must not depend on external cloud connectivity.
 The developer may choose the communication method best suited to the selected lamp.
+
 Android Compatibility: The application must support the widest practical range of Android devices, manufacturers, and operating system versions, using adaptive platform integration to ensure maximum compatibility with available hardware and system capabilities.
 
 Future Expansion: The Version 1 architecture must support future expansion with additional device types, communication technologies, control interfaces, and platforms without requiring a complete redesign of the Core.
@@ -62,7 +64,9 @@ The developer must prioritize universal compatibility, flexibility, modularity, 
 3. User Interaction Scenario
 
 Application Startup, Login, and Security Management
+
 Welcome State: When the user opens the application, display a brief welcome screen showing Loca Nova.
+
 Initial Setup: On the very first launch after installation, prompt the user to create their initial PIN (which also serves as the Administrator PIN by default, with an option to set a separate Administrator PIN later in Settings).
 If Level 1 – Easy Access is active and the initial login has already been completed, skip the Authentication Portal and go directly to the Main Menu.
 Otherwise, proceed to the Authentication Portal.
@@ -72,10 +76,12 @@ On-Screen Keyboard: Show a keyboard icon next to the field. Selecting the applic
 Password fields, such as Wi-Fi or device passwords where applicable, must open a full-screen QWERTY-style keyboard with numbers, letters, spaces, special characters, Backspace, and Enter/Done.
 Support copying, pasting, and long inputs without unnecessary length restrictions.
 Close the keyboard upon confirmation or when the physical or virtual BACK button is pressed, returning smoothly to the previous screen.
+
 PIN Privacy: Hide PINs and passwords by default, providing an explicit toggle option to show or hide the characters.
 Security Levels: The system must support two selectable security levels, manageable within Settings using an administrator PIN:
 
 Level 1 – Easy Access: A PIN is required only the first time the application is opened. After successful entry, the application remains unlocked for everyday use.
+
 Level 2 – Protected Access: A PIN is required every time the application is opened.
 Security Constraint: Never store PINs, passwords, or credentials in plain text. All authentication data must use secure platform credential storage, with hardware-backed protection wherever supported by the target platform.
 PIN recovery is not required for Version 1 and may be considered for a future version.
@@ -83,30 +89,32 @@ PIN recovery is not required for Version 1 and may be considered for a future ve
 Main Menu and Lamp Connection
 
 Main Menu Navigation: Once authenticated, display the Main Menu, designed in the style of an MP3 player-inspired split-screen layout. The user must be able to navigate the menu using supported physical buttons and touch controls to select Devices → Lamp.
+
 Device Scope: The physical lamp is the required operational device for Version 1. The developer may add a smart plug, radio, or TV or other devices as optional demonstrations or extensions.
 
-Lamp Connection: When the user opens Lamp Control, Loca Nova must use the communication method selected for the physical lamp.
-If that method requires Wi-Fi network selection or credentials, guide the user through the required steps using a clear, easy-to-navigate list and the full-screen QWERTY-style keyboard.
-Password fields must follow the privacy rules: hidden by default, with a show/hide toggle.
+Automatic & Guided Lamp Connection: All network and device connections must happen automatically by default so the app is effortless for elderly users. Loca Nova must prompt for manual Wi-Fi selection and password entry (using the full-screen QWERTY keyboard with hidden text and a show/hide toggle) only during initial device pairing or if automatic connection fails. 
 
 Local Core Operation: The application must communicate with the Core running on the same device. The Core must use the appropriate driver or integration to communicate with the physical lamp.
 Discovering a separate server through mDNS is not required for communication with the locally running Core.
 If the selected device or communication method requires a gateway, the developer must clearly identify that dependency. The gateway must not be assumed to be part of the local Core.
+
 Connection Errors: If the lamp or a required communication component cannot be found, or the connection fails, display a friendly error message and offer a RETRY option.
 
 Device Control and UI Consistency: Once the lamp connection is established, open the Lamp Control screen so the user can operate the lamp.
 All connection, selection, and authentication steps must maintain the same classic MP3-player inspired interface style, with clear instructions at every step.
 
-Automatic Connections: All network and device connections must happen automatically so the app is simple, clear, and easy to use for elderly people.
+
 
 
 4. Driver Interface and Modular Deployment
 
 Translation Layer: Drivers handle device-specific operations, translating generic Core JSON payloads into the precise communication methods and hardware operations required by the target device. They return operation results and the reported hardware state to the Core.
+
 Modular Constraints: For Version 1, particularly on Android, device driver modules must be included as statically compiled components within the main application codebase rather than dynamically loaded executable files. This approach must respect platform compatibility and applicable app store security policies.
 Dynamic loading of separate executable binaries may be explored as an optional feature on Windows or other suitable future platforms.
 
 Open-Closed Compliance: New drivers must follow the defined interface and must not require unnecessary changes to existing Core functionality.
+
 Communication Management and Routing: The architecture must include a scalable communication management and routing layer that can select and coordinate suitable communication paths between the Core and compatible devices.
 It must support direct connections, gateways, and relays. The architecture should be extensible to remote communication paths in future versions, using appropriate drivers and protocol adapters.
 It must support managing a large number of diverse devices across different environments and locations, subject to each device's capabilities, connectivity, and required infrastructure.
@@ -115,6 +123,7 @@ Version 1 lamp control must continue to meet the local operation requirements de
 Strict Module Isolation: Keep each device driver and its JSON profile in a separate folder communicating only via a unified Core interface, so future devices require zero changes to existing code. Prove this by disabling the Lamp driver without crashing the app.
 
 Future Driver Management and Cross-Platform Compatibility
+
 The developer must investigate practical methods for adding, installing, downloading, and managing new device drivers without requiring a complete application update.
 The solution must consider Android restrictions and preserve flexibility for future platforms. The architecture must allow different driver installation methods depending on the operating system, without requiring changes to the Core wherever technically possible.
 The developer must identify possible limitations and choose the most flexible and practical solution for long-term expansion.
@@ -123,6 +132,7 @@ The Communication Manager and Device Driver Manager must operate as separate com
 5. UI Layout, Wheel Navigation, and Colors
 
 Retro Player Heritage Aesthetic: Use a Main Menu modeled directly after a classic MP3-player split-screen interface layout, scaled and simplified for elderly accessibility. All visual controls must be large, highly legible, and intuitive.
+
 Unified Button Configuration: The application uses one unified physical/virtual button mapping to navigate and control all supported device categories.
 
 Navigation Button Mappings:
@@ -150,6 +160,7 @@ PREVIOUS and NEXT perform their assigned functions where applicable.
 Appearance Note: 
 The visual circular Click Wheel is purely for nostalgic aesthetics. It must not require or accept rotary sliding or scrolling gestures. All navigation must be completed using predictable click button actions.
 Whenever text or PIN input is required while inside the player interface (such as Wi-Fi or Security settings), the keyboard must replace only the lower Wheel  button control area, keeping the top display screen visible.
+
 State Persistence: Loca Nova must remember the user's last selected device and active menu position, restoring them upon application restart where appropriate.
 
 Consistent Accessibility Color-Coding:
@@ -162,6 +173,7 @@ Device-Specific Button Behavior:
 The same unified button layout must be maintained across all supported device types. Button functions must adapt to the capabilities and requirements of the selected device. The developer must identify and address any technical limitations that could prevent this goal.
 
 Development Approach
+
 Please use your professional skills, experience, and creativity to complete the entire Loca Nova application, following the concept and principles described above.
 You have the freedom to choose the most suitable technical solutions and make improvements wherever necessary.
 Focus on making the application simple and comfortable to use, especially for elderly people. Provide clear, friendly guidance at every step so users always know what to do next.
@@ -173,8 +185,7 @@ Please keep in mind that some instructions may contain mistakes or inconsistenci
 6. Main Menu Structure and Device Control
 
 1. Devices: Lists all available registered and connected equipment.
-Version 1 Scope: Lamp is the primary operational device. Selecting Devices → Lamp → OK opens the dedicated Lamp Control UI.
-The UI displays the active lamp state: ON or OFF.
+Version 1 Scope: Lamp is the primary operational device. Selecting Devices → Lamp → OK opens the dynamic Device Control UI (configured via the Lamp JSON profile). The UI dynamically renders the active device state (such as ON or OFF) based on the profile's capabilities.
 Pressing PLAY/PAUSE sends the appropriate state-change command. The UI must wait for the actual hardware response through the driver, updating the screen to clearly indicate successful execution or failure. It must never assume success.
 2. Drivers: Displays the active driver name, version, and operational status.
 3. Settings: Provides global application settings, configuration profiles, and language localization preferences.
@@ -182,17 +193,22 @@ Pressing PLAY/PAUSE sends the appropriate state-change command. The UI must wait
 7. Network and Connectivity Compatibility
 
 Router Independence: Loca Nova must work across diverse physical network topologies, including standard Wi-Fi routers, local mobile hotspots, and direct peer-to-peer environments, without relying on fixed, static IP addresses or hardcoded router models.
+
 Local Address Independence: Local communication between the application interface and the running Core must not depend on network interface discovery, external IP resolution, or an active local Wi-Fi connection.
 Resilient Device Discovery: Device discovery must use methods appropriate to the selected communication technology and device.
 For IP-based local networks, alternatives such as UDP broadcasting or local IP subnet scanning may be used where supported and appropriate.
 The system must not assume that mDNS, UDP broadcasting, IP subnet scanning, or any single discovery method is available for every connection type or platform.
+
 Graceful Degradation: Handle discovery failures, device dropouts, and connection timeouts safely by prompting the user with friendly error alerts and an easily accessible, prominent RETRY option.
 
 8. Security Framework and Zero-Trust Protocol
 
 Security by Design: Build Loca Nova with encrypted local communication, runtime access controls, strict JSON command validation, and secure cryptographic storage for all local credentials.
+
 Network Isolation: Being connected to the same Wi-Fi router or physical communication medium must never automatically grant access to the system. Every inbound and outbound device-control pipeline must be verified, validated, and authorized at the Core layer, regardless of connection technology.
+
 Credential Isolation: Application entry PINs, administrator PINs, local Wi-Fi infrastructure passwords, and device-specific hardware communication keys must be handled as strictly separate entities. They must never be treated as interchangeable or stored in unencrypted formats.
+
 Privacy Guardrails: Do not expose plain-text credentials or leak cryptographic hashes in local application debugging logs.
 
 9. Data-Driven Architecture (JSON Configurations)
@@ -207,7 +223,9 @@ Adding a device that requires a new communication protocol may also require a su
 Future-Proofing Rules (Schema, Dynamic UI & Cross-Platform)
 
 Schema Versioning: Every JSON device profile and Core command payload must include a "schema_version" field to ensure backward compatibility when the Core is upgraded in the future.
+
 Capability-Driven UI: The UI must render device states dynamically based on generic capability types defined in the JSON profile (e.g., toggle, range/level, status_text) rather than hardcoding screens strictly for ON/OFF lamp states.
+
 Unified Extension Model: Future cross-platform expansion (including Windows) should prioritize portable JSON profiles and standardized protocol adapters over OS-specific binary executables.
 
 10. Device Pairing
