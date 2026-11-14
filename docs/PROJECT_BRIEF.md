@@ -254,11 +254,11 @@ The registry must be designed to support a growing number of different device ty
 
 13. Open Source Delivery and Packaging
 
-The developer must provide the complete application source code under an open-source license and make it available through a public source-code repository.
+The project will be developed in a public GitHub repository under the Apache License 2.0. Developers must provide a testable .apk file and proof of operation (such as a short demo video with a real physical lamp) before their changes are approved for the main release.
 The developer must also provide a ready-to-install Android package (.apk) for Version 1.
 The developer may choose to develop versions for other platforms in future releases, provided that all Android Version 1 requirements are fully met.
 The architecture must preserve flexibility for future cross-platform support.
-The source code must be published in the public repository only after the project creator has tested and approved the .apk package.
+
 
 14. Reference Code and Future Cross-Platform Compatibility
 
