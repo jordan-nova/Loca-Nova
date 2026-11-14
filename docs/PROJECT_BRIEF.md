@@ -206,7 +206,7 @@ Adding a device that requires a new communication protocol may also require a su
 
 Future-Proofing Rules (Schema, Dynamic UI & Cross-Platform)
 
- Schema Versioning: Every JSON device profile and Core command payload must include a "schema_version" field to ensure backward compatibility when the Core is upgraded in the future.
+Schema Versioning: Every JSON device profile and Core command payload must include a "schema_version" field to ensure backward compatibility when the Core is upgraded in the future.
 Capability-Driven UI: The UI must render device states dynamically based on generic capability types defined in the JSON profile (e.g., toggle, range/level, status_text) rather than hardcoding screens strictly for ON/OFF lamp states.
 Unified Extension Model: Future cross-platform expansion (including Windows) should prioritize portable JSON profiles and standardized protocol adapters over OS-specific binary executables.
 
