@@ -29,7 +29,8 @@ To keep the project clean and easy to navigate for everyone, the codebase is org
 If you have never used GitHub before, don't worry! Follow these simple steps to join the project:
 
 1. **Create a Free Account:** Click **Sign up** in the top-right corner of this page to make a free GitHub account (it takes 1 minute).
-2. **Go to My Project Home:** Make sure you are on my main project page: [://github.com](https://://github.com).
+2. **Go to The Project Home:** Make sure you are on my main project page: [github.com/jordan-nova/Loca-Nova](https://github.com/jordan-nova/Loca-Nova).
+
 3. **Pick a Task:** Click on the **Issues** tab near the top of the page, read the 5 tasks, and leave a comment on the one you would like to build (e.g., *"I would like to work on this!"*).
 4. **Make Your Own Copy (Fork):** On the main project page, click the **Fork** button in the top-right corner. This creates your own safe copy of Loca Nova where you can write and upload code freely without breaking anything.
 5. **Upload Your Code & Build the `.apk`:**
@@ -41,16 +42,9 @@ Need any help getting started? Just say hello in [GitHub Discussions](https://:/
 
 ---
 
-## Let's Connect
+## Contact & Discussions
 
 Have questions, ideas, or want to collaborate? We'd love to hear from you:
-
-* **Email:** `вашият_имейл_без_точка@gmail.com`
-* **Discussions:** Say hello or share ideas in [GitHub Discussions](https://github.com)
-* **Issues:** Join the conversation on [GitHub Issues](https://github.com)
-
-
-## Contact & Discussions
 
 * **Email:** `jordan.loca.nova@gmail.com`
 * **Questions & Ideas:** Join our [GitHub Discussions](https://github.com).
