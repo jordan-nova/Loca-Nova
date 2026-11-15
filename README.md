@@ -11,8 +11,8 @@ My mission is to help elderly people by making modern technology accessible, war
 ## Getting Started & Documentation
 
 * **Project Vision & Specs:** Take a look at [PROJECT_BRIEF.md](docs/PROJECT_BRIEF.md) to explore the full architecture, security principles, and elderly-friendly design goals.
-* **Tech Stack (V1):** I am building a native Android application (`.apk`) using **Kotlin** (Jetpack Compose is recommended) with a lightweight local Core.
-* **Starter Reference:** The root `main.py` file is a simple JSON validation example to give you a quick feel for the command structure—feel free to build the Android app natively in Kotlin.
+* * **Tech Stack:** You are free to choose the most suitable programming language and framework for Android V1, as long as the **UI**, **Core/Drivers**, and **JSON device profiles** remain cleanly separated.
+* **Starter Reference:** The root `main.py` file is an initial prototype showing basic JSON validation—you can build upon it or write the Android app in your preferred stack.
 
 ## Project Map (Where Everything Lives)
 
