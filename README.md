@@ -39,7 +39,7 @@ If you have never used GitHub before, don't worry! Follow these simple steps to 
    * Compile the `.apk` in Android Studio (**Build → Build Bundle(s) / APK(s) → Build APK(s)**).
 6. **Send Your Work to Me:** Go to the **Pull requests** tab on my main page, click **New pull request**, and submit your code along with your `.apk` file and a short demo video of the lamp!
 
-Need any help getting started? Just say hello in [GitHub Discussions](https://://github.com/discussions) or email me at `вашият_имейл_без_точка@gmail.com` — I am happy to help!
+Need any help getting started? Just say hello in [GitHub Discussions](https://://github.com/discussions) or email me — I am happy to help!
 
 ---
 
