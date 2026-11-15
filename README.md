@@ -34,6 +34,25 @@ We would love your help in bringing Loca Nova to life! Here is how you can jump 
 4. **Build & Test:** You can test with a simulated lamp first, then verify with a real physical smart lamp. Build your `.apk` in **Android Studio** (**Build → Build Bundle(s) / APK(s) → Build APK(s)**).
 5. **Share Your Work:** Open a **Pull Request (PR)** and include your testable `.apk` along with a short demo video of the lamp in action.
 
+---
+
+## New to GitHub? Quick Start Guide (5 Minutes)
+
+If you have never used GitHub before, don't worry! Follow these simple steps to join the project:
+
+1. **Create a Free Account:** Click **Sign up** in the top-right corner of this page to make a free GitHub account (it takes 1 minute).
+2. **Go to the Project Home:** Make sure you are on our main project page: [://github.com](https://://github.com).
+3. **Pick a Task:** Click on the **Issues** tab near the top of the page, read the 5 tasks, and leave a comment on the one you would like to build (e.g., *"I would like to work on this!"*).
+4. **Make Your Own Copy (Fork):** On the main project page, click the **Fork** button in the top-right corner. This creates your own safe copy of Loca Nova where you can write and upload code freely without breaking anything.
+5. **Upload Your Code & Build the `.apk`:**
+   * Open your copy in **Android Studio** (or upload files directly via **Add file → Upload files** inside the matching folder: `core/`, `drivers/`, `ui/`, `security/`, or `app/`).
+   * Compile the `.apk` in Android Studio (**Build → Build Bundle(s) / APK(s) → Build APK(s)**).
+6. **Send Your Work to Us:** Go to the **Pull requests** tab on our main page, click **New pull request**, and submit your code along with your `.apk` file and a short demo video of the lamp!
+
+Need any help getting started? Just say hello in [GitHub Discussions](https://://github.com/discussions) or email us. We are happy to help!
+
+---
+
 ## Let's Connect
 
 Have questions, ideas, or want to collaborate? We'd love to hear from you:
@@ -55,7 +74,12 @@ Have questions, ideas, or want to collaborate? We'd love to hear from you:
 
 Copyright © 2026 **jordan-nova**.
 
-This release is licensed under the **Apache License 2.0** — see the [LICENSE](LICENSE) file for details.  
+## License
+
+Copyright © 2026 **jordan-nova**.
+
+This project is licensed under the **Apache License 2.0** — see the [LICENSE](LICENSE) file for details.  
 The **Loca Nova** name and brand assets remain the exclusive property of the copyright holder and may not be used without explicit permission.
+
 
 
