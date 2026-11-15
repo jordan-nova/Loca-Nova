@@ -2,7 +2,8 @@
 # Loca Nova
 
 Welcome to **Loca Nova**!  
-My mission is to help elderly people by making modern technology accessible, warm, and easy to use. Modern smart homes are often too complex for them, so with **Loca Nova**, I am turning a smartphone into a simple remote with large buttons and a familiar retro design that works **100% without the internet**.
+Our mission is to help elderly people by making modern technology accessible and easy to use.  
+Modern smart homes are too complex for them, so with Loca Nova, we turn a smartphone into a simple remote with large buttons and a familiar retro design that works without the internet**
 
 ![Loca Nova Interface Preview](preview.png)
 
@@ -11,7 +12,7 @@ My mission is to help elderly people by making modern technology accessible, war
 ## Getting Started & Documentation
 
 * **Project Vision & Specs:** Take a look at [PROJECT_BRIEF.md](docs/PROJECT_BRIEF.md) to explore the full architecture, security principles, and elderly-friendly design goals.
-* * **Tech Stack:** You are free to choose the most suitable programming language and framework for Android V1, as long as the **UI**, **Core/Drivers**, and **JSON device profiles** remain cleanly separated.
+* **Tech Stack:** You are free to choose the most suitable programming language and framework for Android V1, as long as the **UI**, **Core/Drivers**, and **JSON device profiles** remain cleanly separated.
 * **Starter Reference:** The root `main.py` file is an initial prototype showing basic JSON validation—you can build upon it or write the Android app in your preferred stack.
 
 ## Project Map (Where Everything Lives)
