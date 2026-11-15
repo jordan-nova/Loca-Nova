@@ -1,5 +1,5 @@
 ## Our mission is to help elderly people by making modern technology accessible and easy to use. 
-## Modern smart homes are too complex for them, so with Loca Nova, we want to turn a smartphone into a simple remote with large buttons and a familiar retro design that works without the internet.
+## Modern smart homes are too complex for them, so with Loca Nova, we turn a smartphone into a simple remote with large buttons and a familiar retro design that works without the internet.
 
 
 
