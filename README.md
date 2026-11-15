@@ -53,9 +53,6 @@ Have questions, ideas, or want to collaborate? We'd love to hear from you:
 
 ---
 
-## License
-
-Copyright © 2026 **jordan-nova**.
 
 ## License
 
