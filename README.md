@@ -1,73 +1,41 @@
-## Our mission is to help elderly people by making modern technology accessible and easy to use. 
-## Modern smart homes are too complex for them, so with Loca Nova, we turn a smartphone into a simple remote with large buttons and a familiar retro design that works without the internet.
+# Loca Nova
 
+Our mission is to help elderly people by making modern technology accessible and easy to use.  
+Modern smart homes are too complex for them, so with **Loca Nova**, we turn a smartphone into a simple remote with large buttons and a familiar retro design that works **100% without the internet**.
 
+![Loca Nova Interface Preview](preview.png)
 
+---
 
+## Documentation & Architecture
 
+* **Full Specifications:** Read [PROJECT_BRIEF.md](docs/PROJECT_BRIEF.md) for complete details regarding the universal device-control architecture, security framework, and accessibility goals.
+* **Target Platform (V1):** Native Android application (`.apk`) with an embedded, protocol-agnostic local Core.
+* **Reference Prototype:** The root `main.py` file serves solely as an initial local JSON-validation reference prototype and does not restrict the final Android architecture.
 
-## Full Documentation & Instructions:
-## Read [PROJECT_BRIEF.md](./docs/PROJECT_BRIEF.md) for details regarding the project architecture and goals.
+## Repository Structure
 
-## ![Loca Nova Interface Preview](./preview.png)
+To maintain strict module isolation and future-proof expansion, the project is organized into five core directories corresponding to our V1 development roadmap:
 
+* **`core/`** — Protocol-agnostic Core engine, JSON schema validator, Communication Router, and Device Registry *(Issue #2)*.
+* **`drivers/`** — Isolated local device drivers (Wi-Fi / Bluetooth) and declarative JSON device profiles *(Issue #3)*.
+* **`ui/`** — Classic MP3-player split-screen layout, 10-button wheel navigation, and color-coded accessibility controls *(Issue #1)*.
+* **`security/`** — Zero-trust Security Portal, Level 1 & Level 2 authentication, and hardware-backed PIN/password storage *(Issue #4)*.
+* **`app/`** — Main Android application entry point integrating all modules into the final Version 1 MVP *(Issue #5)*.
 
+## Get Involved & Contact
 
-# Loca Nova – Initial Project
+We welcome feedback, ideas, and contributions to our open device drivers and core architecture:
 
-## Description
-This is the initial Python starter project for Loca Nova.
+* **Discussions:** Join the conversation or ask questions in [GitHub Discussions](https://github.com).
+* **Issues:** Check our open [V1 Roadmap Issues](https://github.com) to see current tasks.
 
-## Requirements
-- Python 3
-- No additional Python packages required for the current version.
+---
 
-## Configuration
-Create a `.env` file in the project folder and add:
+## License & Future Versions
 
-```env
-APP_KEY=YOUR_OWN_TEST_KEY
-```
+Version 1 (MVP) of **Loca Nova** is licensed under the **Apache License 2.0** — see the [LICENSE](LICENSE) file for details.
 
-Do not upload the real `.env` file to GitHub.
+* **Trademark Protection:** In accordance with Section 6 of the Apache License 2.0, this license does **not** grant permission to use the trade names, trademarks, service marks, or product names of **Loca Nova** or **jordan-nova** to distribute derivative or competing products without explicit written authorization.
+* **Future Releases & Modular Evolution:** As the sole copyright holder (`© 2026 jordan-nova`), the author reserves the right to change licensing terms, introduce proprietary UI components, and release specialized modules under commercial or private licenses in future versions (V2+).
 
-## Run
-Start the application with:
-
-```bash
-python main.py
-```
-
-The local server runs at:
-
-```text
-http://127.0.0.1:8080/
-```
-
-
-
-## Test Commands
-The server accepts POST requests at `/command`.
-
-Supported commands:
-- ON
-- OFF
-
-The current version validates commands but does not control real hardware.
-
-## Project Status
-This is an initial prototype for further development by the Loca Nova developer.
-## Test Commands
-The server accepts POST requests in JSON format at `/command`.
-
-Example request body:
-```json
-{
-  "password": "YOUR_OWN_TEST_KEY",
-  "command": "ON"
-}
-```
-
-Supported commands:
-- ON
-- OFF
