@@ -33,6 +33,7 @@ Please place all code contributions in the corresponding directory for your assi
 
 ## Contact & Discussions
 
+* **Email:** `jordan.loca.nova@gmail.com`
 * **Questions & Ideas:** Join our [GitHub Discussions](https://github.com).
 * **Tasks & Bugs:** Open or comment on [GitHub Issues](https://github.com).
 
