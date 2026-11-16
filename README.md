@@ -25,7 +25,7 @@ To keep the project clean and easy to navigate for everyone, the codebase is org
 * **`security/`** *(Issue #4)* — Elderly-friendly full-screen PIN/QWERTY keyboards, Level 1 & Level 2 access, and secure credential storage.
 * **`app/`** *(Issue #5)* — The main Android entry point (`MainActivity`) that brings all modules together into the Version 1 `.apk`.
 
-## New to GitHub? Quick Start Guide (5 Minutes)
+## New to GitHub? Quick Start Guide 
 
 If you have never used GitHub before, don't worry! Follow these simple steps to join the project:
 
