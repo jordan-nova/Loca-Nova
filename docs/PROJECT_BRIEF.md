@@ -190,6 +190,7 @@ Pressing PLAY/PAUSE sends the appropriate state-change command. The UI must wait
 2. Drivers: Displays the active driver name, version, and operational status.
 3. Settings: Provides global application settings, configuration profiles, and language localization preferences.
 4. Security: Allows the user to change authentication levels (Level 1 or Level 2) and manage application and administrator PIN credentials.
+
 7. Network and Connectivity Compatibility
 
 Router Independence: Loca Nova must work across diverse physical network topologies, including standard Wi-Fi routers, local mobile hotspots, and direct peer-to-peer environments, without relying on fixed, static IP addresses or hardcoded router models.
