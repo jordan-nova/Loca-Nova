@@ -183,13 +183,16 @@ Feel free to use your professional judgment to improve the design and functional
 Please keep in mind that some instructions may contain mistakes or inconsistencies, and correct them in the code where necessary.
 
 6. Main Menu Structure and Device Control
+ 
+- Devices: Lists all available registered and connected equipment.
+Version 1 Scope: Lamp is the primary test device. Selecting Devices → Lamp → OK opens the capability-driven Device Control UI, configured via the device's versioned JSON profile. The UI dynamically renders the active state (e.g., ON/OFF) and maps the PLAY/PAUSE button to the profile's primary toggle capability.
+Pressing PLAY/PAUSE sends the state-change command and shows a pending state until the driver returns actual hardware confirmation (success, failure, or timeout). The UI never assumes immediate success.
 
-1. Devices: Lists all available registered and connected equipment.
-Version 1 Scope: Lamp is the primary operational device. Selecting Devices → Lamp → OK opens the dynamic Device Control UI (configured via the Lamp JSON profile). The UI dynamically renders the active device state (such as ON or OFF) based on the profile's capabilities.
-Pressing PLAY/PAUSE sends the appropriate state-change command. The UI must wait for the actual hardware response through the driver, updating the screen to clearly indicate successful execution or failure. It must never assume success.
-2. Drivers: Displays the active driver name, version, and operational status.
-3. Settings: Provides global application settings, configuration profiles, and language localization preferences.
-4. Security: Allows the user to change authentication levels (Level 1 or Level 2) and manage application and administrator PIN credentials.
+- Drivers: Displays the active driver name, version, and operational status.
+
+- Settings: Provides global application settings, configuration profiles, and language localization preferences.
+
+- Security: Allows the user to change authentication levels (Level 1 or Level 2) and manage application and administrator PIN credentials.
 
 7. Network and Connectivity Compatibility
 
