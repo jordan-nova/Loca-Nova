@@ -19,7 +19,7 @@ Modern smart homes are too complex for them, so with Loca Nova, we turn a smartp
 
 To keep the project clean and easy to navigate for everyone, the codebase is organized into five friendly modules matching the V1 tasks:
 
-* **`core/`** *(Issue #2)* — The heart of the app: protocol-agnostic Core engine, JSON command validator, and Device Registry.
+* **`core/`** *(Issue #2)* — The heart of the app: protocol-agnostic Core engine, JSON command validator, Device Registry, and separate Communication & Driver Managers.
 * **`drivers/smart_lamp/`** *(Issue #3)* — Local Wi-Fi / Bluetooth driver for controlling a real physical smart lamp and its JSON profile (`lamp_profile.json`).
 * **`ui/`** *(Issue #1)* — The nostalgic MP3-player split-screen layout, 10-button wheel controls, and clear, color-coded accessibility screens.
 * **`security/`** *(Issue #4)* — Elderly-friendly full-screen PIN/QWERTY keyboards, Level 1 & Level 2 access, and secure credential storage.
